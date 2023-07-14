@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AIT_TR_Java_Basic_2023.iml" filepath="$PROJECT_DIR$/AIT_TR_Java_Basic_2023.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_04/code/HomeWork/HomeWork.iml" filepath="$PROJECT_DIR$/Lesson_04/code/HomeWork/HomeWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_05/HomeWork/Homework/Homework.iml" filepath="$PROJECT_DIR$/Lesson_05/HomeWork/Homework/Homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_11/code/Homework_11/Homework_11.iml" filepath="$PROJECT_DIR$/Lesson_11/code/Homework_11/Homework_11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_06/code/char_practic/char_practic.iml" filepath="$PROJECT_DIR$/Lesson_06/code/char_practic/char_practic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_06/code/homework/homework.iml" filepath="$PROJECT_DIR$/Lesson_06/code/homework/homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_10/code/homework_10/homework_10.iml" filepath="$PROJECT_DIR$/Lesson_10/code/homework_10/homework_10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_07/code/homework_7/homework_7.iml" filepath="$PROJECT_DIR$/Lesson_07/code/homework_7/homework_7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_08/code/homework_8/homework_8.iml" filepath="$PROJECT_DIR$/Lesson_08/code/homework_8/homework_8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_09/code/hw_9/hw_9.iml" filepath="$PROJECT_DIR$/Lesson_09/code/hw_9/hw_9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_07/code/if-else practic/if-else practic.iml" filepath="$PROJECT_DIR$/Lesson_07/code/if-else practic/if-else practic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_08/code/if-else-switch_pracrice/if-else-switch_pracrice.iml" filepath="$PROJECT_DIR$/Lesson_08/code/if-else-switch_pracrice/if-else-switch_pracrice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_06/code/method_example/method_example.iml" filepath="$PROJECT_DIR$/Lesson_06/code/method_example/method_example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_10/code/practice/practice.iml" filepath="$PROJECT_DIR$/Lesson_10/code/practice/practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_11/code/practice method/practice method.iml" filepath="$PROJECT_DIR$/Lesson_11/code/practice method/practice method.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_09/code/practice_9/practice_9.iml" filepath="$PROJECT_DIR$/Lesson_09/code/practice_9/practice_9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_06/code/string_practic/string_practic.iml" filepath="$PROJECT_DIR$/Lesson_06/code/string_practic/string_practic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_04/code/test/test/test.iml" filepath="$PROJECT_DIR$/Lesson_04/code/test/test/test.iml" />
+    </modules>
+  </component>
+</project>
