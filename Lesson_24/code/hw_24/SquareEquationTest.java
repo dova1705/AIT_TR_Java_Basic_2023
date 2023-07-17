@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SquareEquationTest {
-    //поля (тип и имя)
+    //поля
     SquareEquation squareEquation;
 
     @BeforeEach
@@ -15,7 +15,18 @@ class SquareEquationTest {
     }
 
     @Test
-    void equationQuadraticTest() {
+    void equationQuadraticRoot1Test() {
+        Double a = 20.0;
+        Double b = 4.0;
+        Double c = 2.0;
+        assertEquals(-1, squareEquation.equationQuadraticRoot1(a, b, c));
+    }
 
+    @Test
+    void equationQuadraticRoot2Test() {
+        Double a = 20.0;
+        Double b = 4.0;
+        Double c = 2.0;
+        assertEquals(-1, squareEquation.equationQuadraticRoot2(a,b,c));
     }
 }
