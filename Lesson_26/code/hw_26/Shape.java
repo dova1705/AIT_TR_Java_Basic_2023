@@ -9,12 +9,19 @@ public abstract class Shape {
         this.a = a;
     }
 
+    //пустой конструктор
+
+
+    public Shape() {
+    }
+
     //сеттеры и геттеры
     public double getA() {
         return a;
     }
 
     public void setA(double a) {
+        // проверка входящего параметра
         this.a = a;
     }
 
