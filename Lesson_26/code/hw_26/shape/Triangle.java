@@ -1,4 +1,4 @@
-package hw_26;
+package hw_26.shape;
 
 public class Triangle extends Shape{
     //поля

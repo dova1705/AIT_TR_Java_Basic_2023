@@ -1,4 +1,4 @@
-package hw_26;
+package hw_26.shape;
 
 public class Square extends Shape{
 
@@ -29,7 +29,7 @@ public class Square extends Shape{
 
     @Override
     public double calcArea() {
-        double area = (sideSquare*2);
+        double area = (sideSquare*4);
         return 0;
     }
 
