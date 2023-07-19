@@ -10,12 +10,12 @@ public class SquareEquation {
 
     //методы
     public Double equationQuadraticRoot1(Double a, Double b, Double c) {
-        Double d = b * b - 4 * a * c;
+        double d = b * b - 4 * a * c;
         Double x1;
         x1 = null;
         if (d < 0) {
             System.out.println("Нет корней");
-        }else {
+        } else {
             x1 = (-b - Math.sqrt(d)) / (2 * a);
             System.out.println("Корни уравнения: Х1 = " + x1);
         }
@@ -23,15 +23,13 @@ public class SquareEquation {
     }
 
     public Double equationQuadraticRoot2(Double a, Double b, Double c) {
-        Double d = b * b - 4 * a * c;
-        Double x2;
-        x2 = null;
+        double d = b * b - 4 * a * c;
+        Double x2 = null;
         if (d < 0) {
             System.out.println("Нет корней");
         }else {
             x2 = (-b + Math.sqrt(d)) / (2 * a);
             System.out.println("Корни уравнения: Х2 = " + x2);
-
         }
         return x2;
     }
