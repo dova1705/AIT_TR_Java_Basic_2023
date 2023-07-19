@@ -10,8 +10,9 @@ public class EmployeeAppl {
 
         printArray(firma);
 
-        double totalSalary =totalSalary(firma);
+        double totalSalary = totalSalary(firma);
         System.out.println("Total month salary = " + totalSalary);
+
 
     }//end of method main
 
