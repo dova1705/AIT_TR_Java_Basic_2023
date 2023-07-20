@@ -1,13 +1,13 @@
-package practice_28_interface.tests;
+package practice_27_interface.tests;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import practice_28_interface.dao.Company;
-import practice_28_interface.dao.CompanyImpl;
-import practice_28_interface.model.Employee;
-import practice_28_interface.model.Manager;
-import practice_28_interface.model.SalesManager;
-import practice_28_interface.model.Worker;
+import practice_27_interface.dao.Company;
+import practice_27_interface.dao.CompanyImpl;
+import practice_27_interface.model.Employee;
+import practice_27_interface.model.Manager;
+import practice_27_interface.model.SalesManager;
+import practice_27_interface.model.Worker;
 
 public class CompanyImplTest {
     Company company;//создали объект класса Company

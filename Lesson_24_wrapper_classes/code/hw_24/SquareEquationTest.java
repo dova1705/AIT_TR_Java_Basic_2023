@@ -24,9 +24,9 @@ class SquareEquationTest {
 
     @Test
     void equationQuadraticRoot2Test() {
-        Double a = 20.0;
-        Double b = 4.0;
-        Double c = 2.0;
-        assertEquals(-1.0, squareEquation.equationQuadraticRoot2(a,b,c));
+        Double a = 1.0;
+        Double b = - 5.0;
+        Double c = 6.0;
+        assertEquals(3, squareEquation.equationQuadraticRoot2(a,b,c));
     }
 }

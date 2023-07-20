@@ -15,14 +15,14 @@
       <sourceFolder url="file://$MODULE_DIR$/Lesson_17/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Lesson_18/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Lesson_19/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lesson_20/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lesson_21/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lesson_22/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lesson_23/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lesson_24/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lesson_25/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lesson_26/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lesson_27/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_20_access_modifiers/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_21_static_class_String/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_22_User_mail/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_23_test/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_24_wrapper_classes/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_25_Git/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_26_abstract_classes_and_methods/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_27_interface/code" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

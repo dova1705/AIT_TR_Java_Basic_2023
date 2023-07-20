@@ -1,4 +1,4 @@
-package practice_28_interface.model;
+package practice_27_interface.model;
 
 public class SalesManager extends Employee {
     //поля

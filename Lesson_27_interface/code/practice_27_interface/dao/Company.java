@@ -1,6 +1,6 @@
-package practice_28_interface.dao;
+package practice_27_interface.dao;
 
-import practice_28_interface.model.Employee;
+import practice_27_interface.model.Employee;
 
 public interface Company {
     //перечень действий = метод
