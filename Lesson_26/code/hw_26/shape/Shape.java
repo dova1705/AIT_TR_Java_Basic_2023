@@ -6,13 +6,8 @@ public abstract class Shape {
 
     //конструктор
     public Shape(double a) {
+
         this.a = a;
-    }
-
-    //пустой конструктор
-
-
-    public Shape() {
     }
 
     //сеттеры и геттеры
@@ -26,8 +21,8 @@ public abstract class Shape {
     }
 
     //методы
-    public abstract double calcArea ();
+    public abstract double calcArea (double a);
 
-    public abstract double calcPerimeter();
+    public abstract double calcPerimeter(double a);
 
 }

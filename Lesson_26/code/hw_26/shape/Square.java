@@ -3,34 +3,31 @@ package hw_26.shape;
 public class Square extends Shape{
 
     //поля
-    private double sideSquare;
+
+
 
 
     //конструктор
-    public Square(double a, double sideSquare) {
+    public Square(double a) {
         super(a);
-        this.sideSquare = sideSquare;
     }
 
     //сеттеры и геттеры
-    public double getSideSquare() {
-        return sideSquare;
-    }
 
-    public void setSideSquare(double sideSquare) {
-        this.sideSquare = sideSquare;
-    }
+
+
+
     //методы
     @Override
-    public double calcPerimeter() {
-        double perimeter = 4 * sideSquare;
+    public double calcPerimeter(double a) {
+        double perimeter = 4 * a;
         return perimeter;
     }
 
     @Override
-    public double calcArea() {
-        double area = (sideSquare*4);
-        return 0;
+    public double calcArea(double a) {
+        double area = a * a;
+        return area;
     }
 
 }

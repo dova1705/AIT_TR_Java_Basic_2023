@@ -24,7 +24,8 @@ public class SquareEquation {
 
     public Double equationQuadraticRoot2(Double a, Double b, Double c) {
         double d = b * b - 4 * a * c;
-        Double x2 = null;
+        Double x2;
+        x2 = null;
         if (d < 0) {
             System.out.println("Нет корней");
         }else {
