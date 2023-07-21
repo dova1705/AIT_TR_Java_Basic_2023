@@ -62,7 +62,7 @@ public abstract class Employee {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Worker.Employee employee = (Worker.Employee) o;
+        Employee employee = (Employee) o;
         return id == employee.id;
     }
 

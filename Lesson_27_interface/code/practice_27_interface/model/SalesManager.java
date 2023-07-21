@@ -1,6 +1,6 @@
 package practice_27_interface.model;
 
-public class SalesManager extends Worker.Employee {
+public class SalesManager extends Employee {
     //поля
     private double salesValue;
     private double percent;

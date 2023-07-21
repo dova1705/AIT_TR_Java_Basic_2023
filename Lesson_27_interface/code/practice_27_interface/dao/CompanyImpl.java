@@ -1,21 +1,22 @@
 package practice_27_interface.dao;
 
-import practice_27_interface.model.Worker;
+
+import practice_27_interface.model.Employee;
 
 public class CompanyImpl implements Company{
 
     @Override
-    public boolean addEmployee(Worker.Employee employee) {
+    public boolean addEmployee(Employee employee) {
         return false;
     }
 
     @Override
-    public Worker.Employee removeEmployee(int id) {
+    public Employee removeEmployee(int id) {
         return null;
     }
 
     @Override
-    public Worker.Employee fineEmployee(int id) {
+    public Employee fineEmployee(int id) {
         return null;
     }
 

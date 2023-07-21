@@ -2,7 +2,7 @@ package practice_27_interface.model;
 
 import java.util.Objects;
 
-public class Worker extends Worker.Employee {
+public class Worker extends Employee {
     //поля
     private double wage; //почасовая ставка
 
