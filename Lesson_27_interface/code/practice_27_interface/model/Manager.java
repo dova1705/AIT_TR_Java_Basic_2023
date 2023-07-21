@@ -2,7 +2,7 @@ package practice_27_interface.model;
 
 //Manager: base + grade * hours
 
-public class Manager extends Employee {
+public class Manager extends Worker.Employee {
     //поля
     private double baseSalary;
     private int grade;

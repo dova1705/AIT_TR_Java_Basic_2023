@@ -13,14 +13,11 @@ public class Triangle extends Shape{
 
     @Override
     public double calcArea(double a) {
-        double s = (a * a) / 2;
-
-        return s;
+        return a * a * Math.sqrt(3) / 4.0;//площадь
     }
 
     @Override
     public double calcPerimeter(double a) {
-        double perimeter = a * 3;
-        return perimeter;
+        return a * 3;//периметр
     }
 }

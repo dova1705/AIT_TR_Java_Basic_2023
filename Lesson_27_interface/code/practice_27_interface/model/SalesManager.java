@@ -1,6 +1,6 @@
 package practice_27_interface.model;
 
-public class SalesManager extends Employee {
+public class SalesManager extends Worker.Employee {
     //поля
     private double salesValue;
     private double percent;
@@ -31,7 +31,7 @@ public class SalesManager extends Employee {
 
     @Override
     public double calcSalary() {
-        double salary = salesValue * percent;
+        double salary = salesValue * percent;// процент от объема продаж
         return salary;
     }
 }

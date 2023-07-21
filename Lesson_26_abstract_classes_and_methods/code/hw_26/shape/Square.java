@@ -2,19 +2,10 @@ package hw_26.shape;
 
 public class Square extends Shape{
 
-    //поля
-
-
-
-
     //конструктор
     public Square(double a) {
         super(a);
     }
-
-    //сеттеры и геттеры
-
-
 
 
     //методы

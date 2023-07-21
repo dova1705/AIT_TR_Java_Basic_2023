@@ -21,8 +21,8 @@ public abstract class Shape {
     }
 
     //методы
-    public abstract double calcArea (double a);
+    public abstract double calcArea (double a);//тело метода отсутствует
 
-    public abstract double calcPerimeter(double a);
+    public abstract double calcPerimeter(double a);//тело метода отсутствует
 
 }

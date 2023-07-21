@@ -5,7 +5,7 @@ import java.util.Objects;
 public abstract class Employee {
     protected static double minWage = 30.0;//ставка в евро
     //поля класса
-    protected final int id;
+    protected final int id;//это хорошо
     protected String firstName;
     protected String lastName;
     protected double hours;
@@ -19,14 +19,12 @@ public abstract class Employee {
     }
 
     //геттеры и сеттеры
-
-
     public static double getMinWage() {
         return minWage;
     }
 
     public static void setMinWage(double minWage) {
-        Employee.minWage = minWage;
+        Worker.Employee.minWage = minWage;
     }
 
     public int getId() {
@@ -64,7 +62,7 @@ public abstract class Employee {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Employee employee = (Employee) o;
+        Worker.Employee employee = (Worker.Employee) o;
         return id == employee.id;
     }
 
@@ -74,7 +72,7 @@ public abstract class Employee {
     }
 
     @Override
-    public String toString() {
+    public String toString() {//можно использовать просто toString
         //воспользуемся классом StringBuilder - это "класс - обертка" для класса String
         final StringBuilder sb = new StringBuilder("Employee");
         sb.append("id = ").append(id);
@@ -85,5 +83,5 @@ public abstract class Employee {
         return sb.toString();
     }
 
-    public abstract double calcSalary();
+    public abstract double calcSalary();// этот метод будет требоваться реализовать в дочерних классах
 }

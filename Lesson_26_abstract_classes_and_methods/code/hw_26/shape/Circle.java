@@ -2,27 +2,20 @@ package hw_26.shape;
 
 public class Circle extends Shape{
 
-    //поля
-
-
     //конструктор
     public Circle(double a) {
-
         super(a);
     }
 
     //сеттеры и геттеры
-
-
     @Override
     public double calcArea(double a) {
-        double area = Math.PI * Math.pow(a, 2); //площадь круга = 3.14 * r * r;
+        double area = Math.PI * a * a; //площадь круга = 3.14 * r * r;
         return area;
     }
 
     @Override
     public double calcPerimeter(double a) {
-        double perimeter = 2 * Math.PI * a; //периметр круга p = 2πr
-        return perimeter;
+        return 2 * Math.PI * a; //периметр круга p = 2πr
     }
 }
