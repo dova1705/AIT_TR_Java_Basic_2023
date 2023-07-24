@@ -2,27 +2,27 @@ package hw_26.shape;
 
 public abstract class Shape {
     //поля
-    double a;
+    double length;//длина какого-то ребра для фигуры, для квадрата - сторона,
+    // дла треугольника - сторона
 
     //конструктор
-    public Shape(double a) {
-
-        this.a = a;
+    public Shape(double length) {//конструктор работает только для дочерних классов!!!
+        this.length = length;
     }
 
-    //сеттеры и геттеры
-    public double getA() {
-        return a;
+    //геттер
+    public double getLength() {
+        return length;
     }
 
-    public void setA(double a) {
-        // проверка входящего параметра
-        this.a = a;
+    //сеттер
+    public void setLength(double length) {
+        this.length = length;
     }
 
     //методы
-    public abstract double calcArea (double a);//тело метода отсутствует
+    public abstract double calcArea (double length);//тело метода отсутствует
 
-    public abstract double calcPerimeter(double a);//тело метода отсутствует
+    public abstract double calcPerimeter(double length);//тело метода отсутствует
 
 }

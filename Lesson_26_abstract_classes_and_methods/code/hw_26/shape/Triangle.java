@@ -7,17 +7,17 @@ public class Triangle extends Shape{
 //    private int sideTriangleC;
 
     //конструктор
-    public Triangle(double a) {
-        super(a);
+    public Triangle(double side) {
+        super(side);
     }
 
     @Override
-    public double calcArea(double a) {
-        return a * a * Math.sqrt(3) / 4.0;//площадь
+    public double calcArea(double side) {
+        return side * side * Math.sqrt(3) / 4.0;//площадь треугольника
     }
 
     @Override
-    public double calcPerimeter(double a) {
-        return a * 3;//периметр
+    public double calcPerimeter(double side) {
+        return side * 3;//периметр
     }
 }

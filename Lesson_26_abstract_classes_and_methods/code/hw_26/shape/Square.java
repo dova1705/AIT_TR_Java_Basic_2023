@@ -3,22 +3,20 @@ package hw_26.shape;
 public class Square extends Shape{
 
     //конструктор
-    public Square(double a) {
-        super(a);
+    public Square(double side) {
+        super(side);
     }
 
 
     //методы
     @Override
-    public double calcPerimeter(double a) {
-        double perimeter = 4 * a;
-        return perimeter;
+    public double calcPerimeter(double side) {
+        return 4 * side;
     }
 
     @Override
-    public double calcArea(double a) {
-        double area = a * a;
-        return area;
+    public double calcArea(double side) {
+        return side * side;
     }
 
 }
