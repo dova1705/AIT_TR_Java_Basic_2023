@@ -10,12 +10,13 @@ public class CompanyImpl implements Company {
 
     //конструктор
    public CompanyImpl(int capacity) {
+
        employees = new Employee[capacity];//capacity становится длина массива
    }
 
     @Override
     public boolean addEmployee(Employee employee) {
-        if (employee == null || size == employees.length){
+        if (employee == null || size == employees.length || findEmployee(employee.getId()) != null){
             return false;
         }
         employees[size] = employee;//добавление в конец массива

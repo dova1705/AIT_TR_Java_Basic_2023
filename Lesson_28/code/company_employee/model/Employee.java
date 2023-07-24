@@ -25,7 +25,7 @@ public abstract class Employee {
     }
 
     public static void setMinWage(double minWage) {
-        Worker.Employee.minWage = minWage;
+        Employee.minWage = minWage;
     }
 
     public int getId() {
