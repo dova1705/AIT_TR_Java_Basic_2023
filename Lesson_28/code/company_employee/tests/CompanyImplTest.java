@@ -39,7 +39,7 @@ public class CompanyImplTest {
         assertFalse(company.addEmployee(firm[2])); // нельзя добавить существующего сотрудника
         assertFalse(company.addEmployee(firm[3])); // нельзя добавить существующего сотрудника
         assertEquals(4, company.size());
-        Employee employee = new SalesManager(106, "Peter", "Petrov", 180, 40000, 0.1);
+        Employee employee = new SalesManager(106, "Peter", "Petrov", 180, 40000, 0.1); //добавление нового сотрудника
         assertTrue(company.addEmployee(employee));
         assertEquals(5, company.size());
         assertFalse(company.addEmployee(firm[3]));// нельзя добавить уже имеющегося сотрудника

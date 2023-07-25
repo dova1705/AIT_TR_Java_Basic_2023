@@ -39,7 +39,7 @@ public class IsPrime {
     public static boolean primeN (int a) {
         boolean isPrime = true;
         System.out.println("n = " + a);
-        for (int i = 2; i < Math.sqrt(a); i++) {
+        for (int i = 2; i < Math.sqrt(a); i++) {//Для сокращения количество циклов вместо i < a - 1 можно написать i < Math.sqrt(a)
             if (a % i == 0) {//если хотя-бы разделилось, то
                 isPrime = false;//объявим что число НЕпростое и можно выйти из цикла
 

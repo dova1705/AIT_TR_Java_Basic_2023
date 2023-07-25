@@ -27,7 +27,7 @@ public class Pet {
     }
     //метод спать
     public void sleep (String name) {
-        System.out.println(name + " пора дремануть");
+        System.out.println(name + " пора дремать");
     }
     //метод пробежка
     public void run (){

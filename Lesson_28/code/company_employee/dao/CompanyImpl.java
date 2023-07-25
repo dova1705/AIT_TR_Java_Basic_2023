@@ -5,7 +5,7 @@ import company_employee.model.Employee;
 public class CompanyImpl implements Company {
 
     //поля о компании
-   private Employee[] employees;
+   private final Employee[] employees;
    private int size;//размер компании
 
     //конструктор
@@ -47,7 +47,7 @@ public class CompanyImpl implements Company {
 
     @Override
     public Employee findEmployee(int id) {
-        for (int i = 0; i < size(); i++) {
+        for (int i = 0; i < size; i++) {
             if (employees[i].getId() == id){
                 return employees[i];
             }
