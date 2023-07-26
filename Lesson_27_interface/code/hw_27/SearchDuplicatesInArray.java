@@ -3,17 +3,26 @@ package hw_27;
 public class SearchDuplicatesInArray {
     public static void main(String[] args) {
 
-        char[] chars = {'c', 'a', 't', 'a', 'm', 'a', 'r', 'a', 'n'};
-        String str = new String(chars, 0,3);
-        System.out.println(str);
+//        char[] chars = {'c', 'a', 't', 'a', 'm', 'a', 'r', 'a', 'n'};
+//        String str = new String(chars, 0,3);
+//        System.out.println(str);
 
-//        int[] myArray = new int[100];
-//        int a = 1;
-//        int b = 10;
-//        for (int i = 0; i < myArray.length; i++) {
-//            myArray[i] = (int)(Math.random() * (b - a + 1) + a);
-//        }
-//        printArray(myArray);
+        int[] myArray = new int[20];
+        int a = 1;
+        int b = 10;
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = (int)(Math.random() * (b - a + 1) + a);
+        }
+        printArray(myArray);
+        printArray(myArray);
+        for (int i = 0; i < myArray.length; i++) {
+            for (int j = i + 1; j < myArray.length; j++) {
+                if (myArray[i] == myArray[j]) {
+                    System.out.println(j);
+                    //TODO
+                }
+            }
+        }
     }//end of method main
 
     public static void printArray (int[] arr){
