@@ -5,7 +5,7 @@ import cars.model.Car;
 public class GarageImpl implements Garage{
 
     //поля
-    private Car[] cars; //массив типа Car куда попадут все авто в гараже
+    private Car[] cars; //массив типа Car куда попадут все авто в гараже (пригодится в тесте)
     private int size; //размер гаража
 
     //конструктор
@@ -69,16 +69,36 @@ public class GarageImpl implements Garage{
 
     @Override
     public Car[] findCarsByCompany(String company) {
-        return new Car[0];
+        int count = 0;
+        for (int i = 0; i < size; i++) { //пробегаем по массиву
+            if (company.equals(cars[i].getModel())) { //проверяем совпадение строк в поле company
+                count++;//возвращаем элемент массива типа Car
+            }
+        }
+        Car[] carsF = new Car[count]; //определил массив размером по количество найденных
+        int totalizer = 0;
+        for (int i = 0; i < size; i++) {
+            if (company.equals(cars[i].getCompany())) { //проверяем совпадение строк в поле company
+                carsF[totalizer] = cars[i]; //заполняем массив carsFound
+                totalizer++;
+            }
+        }
+        return carsF;
     }
 
     @Override
     public Car[] findCarsByEngine(double min, double max) {
         return new Car[0];
+        //TODO
     }
 
     @Override
     public Car[] findCarsByColor(String color) {
         return new Car[0];
+    }
+
+    @Override
+    public int size() {
+        return size;
     }
 }

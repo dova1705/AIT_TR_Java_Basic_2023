@@ -18,6 +18,7 @@ public interface Garage {
     Car[] findCarsByEngine(double min, double max);
     //Находить авто по цвету
     Car[] findCarsByColor(String color);
+    int size();
 
 
 }
