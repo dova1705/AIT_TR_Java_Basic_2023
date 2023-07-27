@@ -50,6 +50,7 @@ public class CompanyImplTest {
         System.out.println(company.size());
         assertEquals(firm[2], company.removeEmployee(102));
         System.out.println(company.size());
+        //TODO
     }
 
     @Test
