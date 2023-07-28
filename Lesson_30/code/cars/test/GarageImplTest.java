@@ -38,6 +38,9 @@ class GarageImplTest {
 
     @Test
     void removeCar() {
+        System.out.println(garage.size());
+        assertEquals(cars[2], garage.removeCar("MR 0707 A"));
+        System.out.println(garage.size());
     }
 
     @Test
