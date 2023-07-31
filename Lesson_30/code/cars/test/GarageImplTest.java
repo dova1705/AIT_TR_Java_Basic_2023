@@ -15,11 +15,12 @@ class GarageImplTest {
 
     @BeforeEach
     void setUp() {
-        garage = new GarageImpl(5);
-        cars = new Car[4];
-        cars[0] = new Car("MR 2946 E", "VAZ 2109", "Taxi Yandex", 1.9, "белый");
+        garage = new GarageImpl(4);
+        cars = new Car[4];//флот машин = 5 штук
+        cars[0] = new Car("MR 2946 E", "VAZ 2109", "Taxi Yandex", 2.0, "белый");
         cars[1] = new Car("MR 1705 D", "Priora", "Taxi Uber", 1.9, "зелёный");
-        cars[2] = new Car("MR 0707 A", "VAZ 2107", "Taxi Maxim", 1.9, "красный");
+        cars[2] = new Car("MR 0707 A", "VAZ 2107", "Taxi Maxim", 1.8, "красный");
+        cars[3] = new Car("MR 5946 0", "VAZ 2109", "Taxi Yandex", 2.0, "белый");
 
         for (int i = 0; i < cars.length; i++) {
             garage.addCar(cars[i]);
@@ -28,30 +29,57 @@ class GarageImplTest {
     }
 
     @Test
-    void addCar() {
-        assertEquals(3, garage.size());
-        Car car = new Car("MR 1705 D", "Priora", "Taxi Uber", 1.9, "зелёный");
-        assertTrue(garage.addCar(car));
-        assertEquals(4, garage.size());
+    void addCarTest() {
+        assertFalse(garage.addCar(null));//добавить null нельзя
+        assertEquals(3, garage.size());//размер гаража
+        Car car = new Car("MR 1959 A", "Priora", "Taxi Uber", 2.2, "зелёный");
+        assertTrue(garage.addCar(car));//добавляем еще одну машину
+        assertEquals(4, garage.size());//проверка размера гаража
+        car = new Car("MR 1957 S", "Mercedes", "Taxi", 2.2, "зелёный");
+        assertFalse(garage.addCar(car));//не можем добавить авто сверх capacity
+
 
     }
 
     @Test
-    void removeCar() {
-        System.out.println(garage.size());
-        assertEquals(cars[2], garage.removeCar("MR 0707 A"));
-        System.out.println(garage.size());
+    void removeCarTest() {
+        //System.out.println(garage.size());
+        assertEquals(3,garage.size());//размер гаража
+        assertEquals(cars[2], garage.removeCar("MR 0707 A"));//удалили авто по рег номеру
+        assertEquals(2,garage.size());//размер гаража
+        //System.out.println(garage.size());
     }
 
     @Test
-    void findCarsByRegNumber() {
+    void findCarsByRegNumberTest() {
+        assertEquals(cars[0], garage.findCarsByRegNumber("MR 2946 E"));
+        assertEquals(null, garage.findCarsByRegNumber("MR 1705 Q"));
+
     }
 
     @Test
-    void findCarsByModel() {
+    void findCarsByModelTest() {
+        Car[] expected = {cars[0], cars[3]};
+        Car[] actual = garage.findCarsByModel("VAZ 2109");
+        assertArrayEquals(expected, actual);
     }
 
     @Test
-    void findCarsByCompany() {
+    void findCarsByCompanyTest() {
+        Car[] expected = {cars[0], cars[3]};
+        Car[] actual = garage.findCarsByCompany("Taxi Yandex");
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    void findCarsByEngineTest() {
+        //TODO
+    }
+
+    @Test
+    void findCarsByColorTest(){
+        Car[] expected = {cars[0], cars[3]};
+        Car[] actual = garage.findCarsByColor("белый");
+        assertArrayEquals(expected, actual);
+
     }
 }

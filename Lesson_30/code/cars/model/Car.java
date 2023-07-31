@@ -3,6 +3,7 @@ package cars.model;
 import java.util.Objects;
 
 public class Car {
+    //поля класса
     private String regNumber;
     private String model;
     private String company; // в гараже стоят машины разных компаний
@@ -10,7 +11,6 @@ public class Car {
     private String color;
 
     //конструктор
-
     public Car(String regNumber, String model, String company, double engine, String color) {
         this.regNumber = regNumber;
         this.model = model;
