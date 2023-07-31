@@ -14,7 +14,7 @@ public class SearchDuplicatesInArray {
             myArray[i] = (int)(Math.random() * (b - a + 1) + a);
         }
         printArray(myArray);
-        printArray(myArray);
+
         for (int i = 0; i < myArray.length; i++) {
             for (int j = i + 1; j < myArray.length; j++) {
                 if (myArray[i] == myArray[j]) {
