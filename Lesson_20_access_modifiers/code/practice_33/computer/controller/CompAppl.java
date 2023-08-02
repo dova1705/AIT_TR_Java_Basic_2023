@@ -1,6 +1,6 @@
-package practice.computer.controller;
+package practice_33.computer.controller;
 
-import practice.computer.model.Comp;
+import practice_33.computer.model.Comp;
 
 public class CompAppl {
     public static void main(String[] args) {

@@ -1,7 +1,21 @@
 package practice_31;
 
 public class JsonWrapper1 {
-    public static void main(String[] args) {
-        //Generics параметры для классов и методов
+    //поле
+    private Object value;
+
+    //конструктор
+    public JsonWrapper1(Object value) {
+        this.value = value;
+    }
+
+    //геттер
+    public Object getValue() {
+        return value;
+    }
+
+    @Override
+    public String toString() {
+        return "{value: " + value + "}";
     }
 }

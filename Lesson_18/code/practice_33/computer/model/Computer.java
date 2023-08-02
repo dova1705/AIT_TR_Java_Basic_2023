@@ -1,4 +1,4 @@
-package practice.computer.model;
+package practice_33.computer.model;
 
 import java.util.Objects;
 

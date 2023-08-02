@@ -1,7 +1,7 @@
-package practice.library.controller;
+package practice_33.library.controller;
 
-import practice.library.models.Book;
-import practice.library.models.Library;
+import practice_33.library.models.Book;
+import practice_33.library.models.Library;
 
 public class LibraryAppl {
     public static void main(String[] args) {
