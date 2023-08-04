@@ -12,9 +12,6 @@ class CatTest {
     Cat[] cats; //массив из объектов типа Cat
 
 
-
-
-
     @BeforeEach
     void setUp() {
         cats = new Cat[]{
@@ -33,8 +30,6 @@ class CatTest {
         System.out.println();
         System.out.println("=================== Cats sorted by ages ===================");
         printArray(cats);//вызов метода printArray
-
-
     }
     @Test
     void catSortNameTest(){
@@ -53,12 +48,15 @@ class CatTest {
         Comparator<Cat> catComparator = new Comparator<Cat>() {
             @Override
             public int compare(Cat o1, Cat o2) {
-                return o1.getAge() - o2.getAge();
+                //return o1.getAge() - o2.getAge();
+                return Double.compare(o1.getWeight(), o2.getWeight());
             }
         };
         Arrays.sort(cats, catComparator); //сортировка с помощью catComporator
-        System.out.println("=================== Cats sorted by age ===================");
+        System.out.println("=================== Cats sorted by weight ===================");
         printArray(cats);//вызов метода printArray
+
+
     }
 
     @Test
@@ -69,8 +67,6 @@ class CatTest {
         System.out.println();
         System.out.println("=================== Cats sorted by name and age ===================");
         printArray(cats);//вызов метода printArray
-
-
     }
 
     //_____________________Methods__________________
