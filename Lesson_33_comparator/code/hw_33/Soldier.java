@@ -1,5 +1,7 @@
 package hw_33;
 
+import java.util.function.Predicate;
+
 public class Soldier {
 
     //Задание 1. Создать класса Soldier (name, height, weight, profile). Profile = 1 до 99.
@@ -68,5 +70,15 @@ public class Soldier {
             }
         }
         return -1; //несуществующий индекс
+    }
+
+    //поиск объектов по условию
+    public static <T> T findByPredicate(T[] arr, Predicate<T> predicate){//метод возвращает тип Т из массива типа Т[], отбор по предикату
+        for (int i = 0; i < arr.length; i++) {
+            if (predicate.test(arr[i])){
+                return arr[i];
+            }
+        }
+        return null;
     }
 }
