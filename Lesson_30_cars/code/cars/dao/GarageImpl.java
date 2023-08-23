@@ -8,8 +8,9 @@ public class GarageImpl implements Garage {
     private Car[] cars; //массив типа Car куда попадут все авто в гараже (пригодится в тесте)
     private int size; //размер гаража
 
-    //конструктор
+    //конструктор, так как совпадает с именем класса, на вход получает целое число int
     public GarageImpl(int capacity) {
+
         cars = new Car[capacity];
     }
 

@@ -1,7 +1,6 @@
-package practice_35;
+package practice_36.city;
 
-public class City implements Comparable<City>{
-
+public class City implements Comparable<City> {
     private String name;
     private int population;
 
@@ -36,9 +35,7 @@ public class City implements Comparable<City>{
 
     @Override
     public int compareTo(City o) {
-        //return this.name.compareTo(o.name); //сортируем по именам по алфавиту, таков естественный порядок для этого класса
-        return Integer.compare(population, o.population); //по размеру населения
-        //return this.population - o.population;//по размеру населения
-
+        return Integer.compare(this.population, o.population); // сравнили по размеру популяции
+       // return this.population - o.population;
     }
 }

@@ -28,10 +28,14 @@
       <sourceFolder url="file://$MODULE_DIR$/Lesson_31/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Lesson_32/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Lesson_33_comparator/code" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Lesson_34/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Lesson_30_cars/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Lesson_35/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Lesson_36/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_37/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_38/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_34_array_methods/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_39/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_40/code" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

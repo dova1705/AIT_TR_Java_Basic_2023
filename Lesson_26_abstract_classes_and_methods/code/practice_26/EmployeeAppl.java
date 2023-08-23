@@ -14,14 +14,14 @@ public class EmployeeAppl {
         System.out.println("Total month salary = " + totalSalary);
 
 
-    }//end of method main
+    }//end of class
 
     //------------method------------
     public static double totalSalary(Employee[] firma){
         double sum = 0;
         for (int i = 0; i < firma.length; i++) {
             if (firma[i] != null){
-                sum += firma[i].calcSalary();
+                sum += firma[i].calcSalary();//sum = sum + firma[i].calcSalary()
             }
         }
         return sum;

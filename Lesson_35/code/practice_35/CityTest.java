@@ -45,14 +45,13 @@ class CityTest {
         City pattern = new City(null,670_000);
         int index = Arrays.binarySearch(cities, pattern);
         System.out.println("Index = " + index);//результат индекс массива
-
     }
 
     //сортировку по имени (по алфавиту), сделаем с помощью Comparator
     @Test
     void binarySearch1Test(){
         printArray(cities, "Original array");
-        Comparator<City> cityComparator = (c1, c2) -> c1.getName().compareTo(c2.getName()); // 1-й вариант
+            Comparator<City> cityComparator = (c1, c2) -> c1.getName().compareTo(c2.getName()); // 1-й вариант
      //   Comparator<City> cityComparator = new Comparator<City>() {
      //       @Override
      //       public int compare(City o1, City o2) {
@@ -62,14 +61,24 @@ class CityTest {
        // Comparator<City> cityComparator = Comparator.comparing(City::getName); //Сравниваем объекты класса City по именам
         Arrays.sort(cities, cityComparator);// выполнили сортировку
         printArray(cities, "Sort by name");
-
         City pattern = new City("Chicago", 0);
-        int index = Arrays.binarySearch(cities, pattern);
+        int index = Arrays.binarySearch(cities, pattern, cityComparator); //поиск по имени
         System.out.println("Index= " + index);
-        //TODO
-
     }
 
-
-
+    //увеличиваем длину массива в 2 раза
+    @Test
+    void testArrayCopy(){
+        printArray(cities, "Original array");
+        City[] citiesCopy = Arrays.copyOf(cities, cities.length * 2);
+        printArray(citiesCopy, "citiesCopy before sorting");
+        // пытаемся провести сортировку этого массива
+        //Arrays.sort(citiesCopy);
+        //printArray(citiesCopy, "citiesCopy after sorting");
+        //массив с null внутри не сортируется стандартным образом
+        Comparator<City> cityComparator = (c1, c2) -> c1.getName().compareTo(c2.getName());
+        Arrays.sort(citiesCopy, 0, cities.length, cityComparator);
+        printArray(citiesCopy, "citiesCopy after sorting!!!");
+        //сортировать можно только без null ту часть массива, где их нет
+    }
 }

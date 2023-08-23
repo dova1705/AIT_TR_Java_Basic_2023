@@ -3,6 +3,8 @@ package practice_34.array_methods.model;
 import java.util.Objects;
 
 public class Soldier implements Comparable<Soldier> { //Чтобы класс стал сортируемым, ему надо добавить implements Comparable и реализовать метод int compareTo
+
+    //поля класса
     String name;
     int height;
     double weight;

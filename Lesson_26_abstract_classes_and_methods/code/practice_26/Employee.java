@@ -55,7 +55,7 @@ public abstract class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return id == employee.id;
+        return id == employee.id;//сравнение по id
     }
 
     @Override

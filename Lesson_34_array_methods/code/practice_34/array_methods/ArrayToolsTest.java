@@ -18,7 +18,7 @@ class ArrayToolsTest {
     void setUp() {
         arrNum = new Integer[]{9, 7, 4 , 7, 2, 5, 9, 1, 0};
         arrStr = new String[] {"one", "two", "three", "four", "five"};
-        soldiers = new Soldier[]{
+            soldiers = new Soldier[]{
                 new Soldier("John", 182, 82.3, 81),
                 new Soldier("Peter", 175, 77.1, 75),
                 new Soldier("Robin", 182, 69.3, 92),
@@ -49,6 +49,7 @@ class ArrayToolsTest {
         //для строки
         ArrayTools.printArray(arrStr);
         int index = ArrayTools.search(arrStr, "four");
+        System.out.println(index);
         assertEquals(3, index);
         assertEquals(-1, ArrayTools.search(arrStr, "six"));
 
@@ -71,7 +72,7 @@ class ArrayToolsTest {
 
         //для целых чисел
         ArrayTools.printArray(arrNum);
-        Integer res = ArrayTools.findByPredicate(arrNum, n -> n > 5 && n < 10);
+        Integer res = ArrayTools.findByPredicate(arrNum, n -> n > 5 && n < 10);//находит первое число меньше 5 больше 10
         System.out.println(res);
         res = ArrayTools.findByPredicate(arrNum, n -> n%5 == 0);// -> лямбда выражения
         System.out.println(res);
@@ -81,7 +82,7 @@ class ArrayToolsTest {
         String str = ArrayTools.findByPredicate(arrStr, s-> s == "two");
         System.out.println(str);
         assertEquals("two", str);
-        str = ArrayTools.findByPredicate(arrStr, s-> s.length() == 5);
+        str = ArrayTools.findByPredicate(arrStr, s-> s.length() == 5);//????
         System.out.println(str);
 
         //для Soldier
