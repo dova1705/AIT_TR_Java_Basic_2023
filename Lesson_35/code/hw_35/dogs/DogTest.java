@@ -23,6 +23,15 @@ class DogTest {
         dogs[2] = new Dog(102, "Sharik", 1);
         dogs[3] = new Dog(103, "Bobik", 6);
         dogs[4] = new Dog(104, "Layka", 7);
+
+        // или так
+        // dogs = new Dog[] {
+        //        new Dog(100, "Mukhtar", 5),
+        //        new Dog(101, "Recs", 3),
+        //        new Dog(102, "Sharik", 1),
+        //        ....
+        // };
+
     }
 
     //метод для печати массива
@@ -35,14 +44,17 @@ class DogTest {
 
     @Test
     void binarySearchTest() {
+        // бинарный поиск работает ТОЛЬКО с ОТСОРТИРОВАННЫМ МАССИВОМ
         printArray(dogs, "Несортированный массив собак");
-        Arrays.sort(dogs);//Сортировка по убыванию. Метод написан в классе Dog compareTo
+       // Arrays.sort(dogs);//Сортировка по убыванию. Метод написан в классе Dog compareTo
+        Comparator<Dog> dogComparator = Comparator.comparing(Dog :: getAge); // сортировка компаратором по весу, на вход подаем какой класс сортируем после двоеточие :: пишем по какому критерию сортируем (возраст, имя, иес id ....)
+        Arrays.sort(dogs, dogComparator);// выполнили сортировку
         printArray(dogs, "Сортированный массив собак");
 
         //теперь можно применять BinarySearch
-        Dog pattern = new Dog(102);
+        Dog pattern = new Dog(102);//поиск BinarySearch существующего элемента
         int index = Arrays.binarySearch(dogs, pattern);
-        System.out.println("индекс искомого объекта: " + index);
+        System.out.println("индекс искомого объекта: " + index);//ожидаем индекс 0
     }
 
     //сортировку по имени (по алфавиту), сделаем с помощью Comparator
@@ -61,7 +73,7 @@ class DogTest {
 
         Dog pattern = new Dog(100, "Mukhtar", 5);
         int index = Arrays.binarySearch(dogs, pattern, dogComparator);//поиск по имени (63- троке dogComparator для чего??)
-        System.out.println("индекс: " + index);
+        System.out.println("индекс: " + index); //ожидаем 2
     }
 
     @Test

@@ -1,5 +1,7 @@
 package hw_35.dogs;
 
+import java.util.Objects;
+
 public class Dog implements Comparable<Dog> {
 
     //поля класса, описывающий объект
@@ -47,6 +49,19 @@ public class Dog implements Comparable<Dog> {
     @Override
     public String toString() {
         return "Dog{ id: " + id + ", name: " + name + ", age: " + age + "}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Dog dog = (Dog) o;
+        return id == dog.id && age == dog.age && Objects.equals(name, dog.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, age);
     }
 
     @Override
