@@ -2,24 +2,31 @@ package hw_35.employee.model;
 
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
     //Задание 1
     // создать класс Employee с полями: name, yearOfBirth, experience (стаж работы), образование
     //  со стандартными конструкторами, геттерами и сеттерами переопределить методы toString equals
 
     //поля класса, описывающий объект
-    String name;
-    int yearOfBirth;
-    double experience;
-    int id;
+    String name; //имя
+    int yearOfBirth; //год рождение
+    int experience;//стаж работы
+    int id;//идентификатор
 
     //конструктор
 
-    public Employee(String name, int yearOfBirth, double experience, int id) {
+    public Employee(String name, int yearOfBirth, int experience, int id) {
         this.name = name;
         this.yearOfBirth = yearOfBirth;
         this.experience = experience;
         this.id = id;
+    }
+
+
+    //пустой конструктор
+
+
+    public Employee() {
     }
 
     //сеттеры и геттеры
@@ -39,11 +46,11 @@ public class Employee {
         this.yearOfBirth = yearOfBirth;
     }
 
-    public double getExperience() {
+    public int getExperience() {
         return experience;
     }
 
-    public void setExperience(double experience) {
+    public void setExperience(int experience) {
         this.experience = experience;
     }
 
@@ -77,4 +84,11 @@ public class Employee {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    @Override
+    public int compareTo(Employee o) {
+        return this.name.compareTo(o.name);// по имени, в алфавитном порядке
+    }
+
+
 }

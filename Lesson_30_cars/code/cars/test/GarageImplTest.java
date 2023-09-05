@@ -15,7 +15,7 @@ class GarageImplTest {
 
     @BeforeEach
     void setUp() {
-        garage = new GarageImpl(4);
+        garage = new GarageImpl(5);
         cars = new Car[4];//флот машин = 5 штук
         cars[0] = new Car("MR 2946 E", "VAZ 2109", "Taxi Yandex", 2.0, "белый");
         cars[1] = new Car("MR 1705 D", "Priora", "Taxi Uber", 1.9, "зелёный");
@@ -31,10 +31,10 @@ class GarageImplTest {
     @Test
     void addCarTest() {
         assertFalse(garage.addCar(null));//добавить null нельзя
-        assertEquals(3, garage.size());//размер гаража
+        assertEquals(4, garage.size());//размер гаража
         Car car = new Car("MR 1959 A", "Priora", "Taxi Uber", 2.2, "зелёный");
         assertTrue(garage.addCar(car));//добавляем еще одну машину
-        assertEquals(4, garage.size());//проверка размера гаража
+        assertEquals(5, garage.size());//проверка размера гаража
         car = new Car("MR 1957 S", "Mercedes", "Taxi", 2.2, "зелёный");
         assertFalse(garage.addCar(car));//не можем добавить авто сверх capacity
 

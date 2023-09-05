@@ -66,7 +66,7 @@ public class City implements Comparable<City>{
     }
 
     @Override
-    public int compareTo(City o) {// City o - это второй объект из сравниваемых, а где первый объект, с которым происходит сравнение?
+    public int compareTo(City o) {// City o - это второй объект из сравниваемых, а где первый объект, с которым происходит сравнение? this
         //return this.name.compareTo(o.name); //сортируем по именам по алфавиту, таков естественный порядок для этого класса
         return -(this.population - o.population);//сортируем по количеству населения
     }

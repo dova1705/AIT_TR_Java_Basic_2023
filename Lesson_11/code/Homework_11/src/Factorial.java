@@ -9,15 +9,15 @@ public class Factorial {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Input number: ");//приглашение пользователю
-        int n = sc.nextInt();// считываем целое число (до какого числа будем вычеслять факториал)
+        int n = sc.nextInt();// считываем целое число (до какого числа будем вычислять факториал)
         int factorial = factorialN(n);//вызов метода с параметром n
         System.out.println("factorial of the number " + n + " is " + factorial);
     }//end of main
 
     //----------------method-----------------------
     public static int factorialN (int a) {
-        int i = 0;// начальное значание параметр (счетчик)
-        int sum = 1; // переменная для накапления результата
+        int i = 0;// начальное значение параметр (счетчик)
+        int sum = 1; // переменная для накопления результата
         while (i < a) { //пока i растет n - 1
             i ++;// увеличение параметра цикла
             sum = sum * i;//вычисление факториала

@@ -79,18 +79,17 @@ class CompanyImplTest {
     @Test
     void sortByExperience(){
 
-        company.printEmployees();
         Comparator<Employee> employeeComparator = new Comparator<Employee>() {
             @Override
             public int compare(Employee o1, Employee o2) {
-                //return o1.getExperience() - o2.getExperience();//сравнение по полю experience которое имеет тип int
-                return Integer.compare(o1.getExperience(), o2.getExperience());//сравнение по полю experience которое имеет тип int
+                return o1.getExperience() - o2.getExperience();//сравнение по полю experience которое имеет тип int
+                //return Integer.compare(o1.getExperience(), o2.getExperience());//сравнение по полю experience которое имеет тип int
             }
         };
 
         company.printEmployees();
-//        Arrays.sort(employees, employeeComparator);
-//        company.printEmployees();
+        Arrays.sort(employees, employeeComparator);
+        company.printEmployees();
     }
 
 }

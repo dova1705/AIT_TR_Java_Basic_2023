@@ -39,7 +39,7 @@ class CityTest {
         //BinarySearch можно применять Только к ОТСОРТИРОВАННОМУ массиву
     void binarySearchTest () {
         printArray(cities, "Original array");
-        Arrays.sort(cities);// сортировка в "естественном" порядке
+        Arrays.sort(cities);// сортировка в "естественном" порядке. Метод написан в классе City compareTo
         printArray(cities, "Natural order (population)");
         //теперь можно применять BinarySearch
         City pattern = new City(null,670_000);
@@ -51,7 +51,7 @@ class CityTest {
     @Test
     void binarySearch1Test(){
         printArray(cities, "Original array");
-            Comparator<City> cityComparator = (c1, c2) -> c1.getName().compareTo(c2.getName()); // 1-й вариант
+            Comparator<City> cityComparator = (c1, c2) -> c1.getName().compareTo(c2.getName()); // 1-й вариант (через лямбду выражения)
      //   Comparator<City> cityComparator = new Comparator<City>() {
      //       @Override
      //       public int compare(City o1, City o2) {

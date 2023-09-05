@@ -10,7 +10,6 @@ public class CompanyImpl implements Company {
 
     //конструктор
    public CompanyImpl(int capacity) {
-
        employees = new Employee[capacity];//capacity становится длина массива
    }
 
@@ -42,7 +41,7 @@ public class CompanyImpl implements Company {
                 return victim;//если нашли в цикле выходим из массива
             }
         }
-       return null;
+       return null;//если не нашлось возвращаем null
     }
 
     @Override
@@ -62,6 +61,9 @@ public class CompanyImpl implements Company {
 
     @Override
     public void printEmployee() {
-
+        for (int i = 0; i < size; i++) {
+            System.out.println(employees[i]);
+        }
+        System.out.println("=====================================================");
     }
 }

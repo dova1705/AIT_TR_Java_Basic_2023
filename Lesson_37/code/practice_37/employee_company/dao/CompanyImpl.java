@@ -48,24 +48,24 @@ public class CompanyImpl implements Company {
                 return victim; // возвращаем найденный объект
             }
         }
-        return null;
+        return null; //если не нашлось объект с заданным id возвращаем null
     }
 
     // метод для поиска сотрудника по его id
     @Override
-    public Employee findEmployee(int id) {
-        for (int i = 0; i < size; i++) {
-            if (employees[i].getId() == id) {
-                return employees[i];
+    public Employee findEmployee(int id) {// получили на вход id
+        for (int i = 0; i < size; i++) {// перебираем весь массив
+            if (employees[i].getId() == id) {// находим жертву по его id
+                return employees[i];//возвращаем найденного
             }
         }
-        return null;
+        return null;//если не нашлось объект с заданным id возвращаем null
     }
 
     // метод выясняет кол-во сотрудников
     @Override
     public int size() {
-        return size;
+        return size;//возвращаем текущее значение
     }
 
     // метод для печати

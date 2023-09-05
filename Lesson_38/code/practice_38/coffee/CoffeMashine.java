@@ -1,23 +1,21 @@
 package practice_38.coffee;
 
-import practice_38.seasons.Season;
-
 import java.util.Scanner;
 
 public class CoffeMashine {
     public static void main(String[] args) {
-
         System.out.println("Welcome to our Coffee Shop!");
 
-        //предложить меню
-        Coffee[] menu = Coffee.values();// в массив положили все 4 сезонов. values(): возвращает массив из всех хранящихся в Enum значений
-        for (int i = 0; i < menu.length; i++) {//цикл
-            System.out.println((i + 1) + " - " + menu[i]); //печать массива
+        //предложить меню (печать меню)
+        Coffe[] menu = Coffe.values();
+        for (int i = 0; i < menu.length; i++) {
+            System.out.println((i + 1) + " - " + menu[i]);
         }
+
         //понять выбор пользователя
-        System.out.println("input number of your choice: ");//приглашение пользователю
-        Scanner sc = new Scanner(System.in);//включили сканер
-        int choice = sc.nextInt();//слушаем пользователя
+        System.out.println("Input number of your choice");
+        Scanner sc = new Scanner(System.in);
+        int choice = sc.nextInt();
         switch (choice) {
             case 1, 2, 3, 4, 5: {
                 System.out.println("Your choice is: " + menu[choice - 1].name());
@@ -29,8 +27,8 @@ public class CoffeMashine {
                 System.out.println("Wrong choice");
             }
         }
-        //объявить цену и предложить оплатить
 
-
+        //объявить цену и предложить оплату
     }
+
 }

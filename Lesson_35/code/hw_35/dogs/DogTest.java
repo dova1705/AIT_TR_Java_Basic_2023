@@ -72,7 +72,7 @@ class DogTest {
         printArray(dogs, "Сортированный по имени массив собак");
 
         Dog pattern = new Dog(100, "Mukhtar", 5);
-        int index = Arrays.binarySearch(dogs, pattern, dogComparator);//поиск по имени (63- троке dogComparator для чего??)
+        int index = Arrays.binarySearch(dogs, pattern, dogComparator);//поиск по имени
         System.out.println("индекс: " + index); //ожидаем 2
     }
 

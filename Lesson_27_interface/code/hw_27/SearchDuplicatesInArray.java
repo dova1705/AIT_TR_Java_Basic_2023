@@ -19,7 +19,6 @@ public class SearchDuplicatesInArray {
             for (int j = i + 1; j < myArray.length; j++) {
                 if (myArray[i] == myArray[j]) {
                     System.out.println(j);
-                    //TODO
                 }
             }
         }
