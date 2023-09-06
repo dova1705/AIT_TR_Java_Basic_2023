@@ -88,9 +88,9 @@ public class TimeAppl {
         newDate = currentDate.plus(10, ChronoUnit.CENTURIES);//amountToAdd 10 - добавляет 10. ChronoUnit.CENTURIES это что добавить (день, неделя, год, век....) в данном случае 10 веков
         System.out.println("Через 10 лет " +  newDate);
 
-        //получение интервала времени
+        //получение интервала времени (enum ChronoUnit)
         LocalDate lenin = LocalDate.of(1870,4,22);
-        long res = ChronoUnit.YEARS.between(lenin, gagarin);//метод YEARS.between на вход подаем два переменных типа LocalDate
+        long res = ChronoUnit.YEARS.between(lenin, gagarin);//метод YEARS.between на вход принимает две даты и возвращает полное количество лет между ними.
         System.out.println("День рождения Ленина - день старта Гагарина (в годах): " + res);
 
         System.out.println("Сравнение LocalDate");
@@ -118,7 +118,7 @@ public class TimeAppl {
 
     private static LocalDate dateParse(String date){//на вход получает String
         //DateTimeFormatter df = DateTimeFormatter.ofPattern("[yyyy-MM-dd]");//применили форматер, формат сами определили DateTimeFormatter.ofPattern("[dd/MM/yyyy] [yyyy-MM-dd]")
-        DateTimeFormatter df = DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy.MM.dd]");
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("[dd/MM/yyyy]");
         return LocalDate.parse(date, df);//возвращает date с применением форматера df
 //        if (date.contains("-")){
 //            return LocalDate.parse(date);

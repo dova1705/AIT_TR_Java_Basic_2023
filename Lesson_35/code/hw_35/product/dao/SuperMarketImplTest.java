@@ -30,6 +30,11 @@ class SuperMarketImplTest {
         products[3] = new Food(201,"Старый рецепт",1.50,"ряженка");
         products[4] = new Furniture(300,"Пинскдрев",50.0,"кресло");
         products[5] = new Furniture(301,"Икеа",20.0,"табуретка");
+        //или products = new Product[]{
+        //                          new Computer(100,"Lenovo",255.5,"Intel(R) Pentium(R)",8),
+        //                          new Furniture(300,"Пинскдрев",50.0,"кресло"),
+        //                          new Food(200,"Простоквашино",1.20,"кефир"),
+        //        };
 
         for (int i = 0; i < products.length; i++) {// перебираем весь массив
             superMarket.add(products[i]); //добавляет продукта
