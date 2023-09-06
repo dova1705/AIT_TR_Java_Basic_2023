@@ -8,7 +8,7 @@ public class CoffeeMashine {
         System.out.println("Welcome to our Coffee Shop!");
 
         //предложить меню
-        Coffee[] menu = Coffee.values();// в массив положили все 4 сезонов. values(): возвращает массив из всех хранящихся в Enum значений
+        Coffee[] menu = Coffee.values();// в массив положили все сорта кофе. values(): возвращает массив из всех хранящихся в Enum значений
         for (int i = 0; i < menu.length; i++) {//цикл
             System.out.println((i + 1) + " - " + menu[i]); //печать массива
         }

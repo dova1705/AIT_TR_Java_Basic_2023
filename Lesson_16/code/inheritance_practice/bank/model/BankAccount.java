@@ -26,7 +26,7 @@ public class BankAccount {
         this.branch = branch;
     }
 
-    //конструктор без владелца
+    //конструктор без владельца
     public BankAccount(long account, String bank, int branch, double balance) {
         this.account = account;
         this.bank = bank;

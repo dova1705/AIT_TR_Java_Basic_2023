@@ -15,7 +15,7 @@ public class Sum {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input number: ");//приглашение пользователю
         long num = sc.nextLong();// считываем целое число
-        double sumDigits = sumN(num);// ввызов метода
+        double sumDigits = sumN(num);// вызов метода
         System.out.println("Sum of digits: " + sumDigits);//печатаем результат
     }//end of main
 

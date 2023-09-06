@@ -19,7 +19,7 @@ public enum Menu {
         this.menuItem = menuItem;
     }
 
-    //метод void - ничего не возвращает, но печатает
+    //метод void - ничего не возвращает, он печатает
     public static void printMenu(){
         Menu[] menu = Menu.values();
         for (int i = 0; i < Menu.values().length; i++) {
