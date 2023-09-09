@@ -2,7 +2,7 @@ package practice_39.todo_appl.model;
 
 import java.util.Objects;
 
-public class Task implements Comparable<Task> {
+public class Task implements Comparable<Task> { // для сортировки нужен implements Comparable<"имя класса">
 
     //поля класса, они описывают ОБЪЕКТЫ класса
     private int id; //идентификатор
@@ -34,11 +34,11 @@ public class Task implements Comparable<Task> {
     //метод toString
     @Override
     public String toString() { //переопределяем для себя, для использования в своей программе, ЭТО ПОЛИМОРФИЗМ
-        return "Task{" + "id=" + id + ", task='" + task  + '}';
+        return "Task{" + "id= " + id + ", task=' " + task  + '}';
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o) {// для сравнения полей
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Task task = (Task) o;
@@ -51,7 +51,7 @@ public class Task implements Comparable<Task> {
     }
 
     @Override
-    public int compareTo(Task o) {
+    public int compareTo(Task o) { // при сортировке положительный возврат меняет местами
         return this.id - o.id; //естественная сортировка по id от меньшего к большому.
     }
 }

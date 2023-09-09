@@ -5,7 +5,7 @@ import practice_39.todo_appl.model.Task;
 public interface ToDoList {
 
     // add Task
-    boolean addTask(Task task);
+    boolean addTask();
 
     // remove Task
     Task removeTask(int id);

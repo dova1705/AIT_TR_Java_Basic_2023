@@ -91,7 +91,7 @@ public class TimeAppl {
         //получение интервала времени (enum ChronoUnit)
         LocalDate lenin = LocalDate.of(1870,4,22);
         long res = ChronoUnit.YEARS.between(lenin, gagarin);//метод YEARS.between на вход принимает две даты и возвращает полное количество лет между ними.
-        System.out.println("День рождения Ленина - день старта Гагарина (в годах): " + res);
+        System.out.println("День рождения Ленина - день старта Гагарина (в годах): " + res);//ожидаем разницу 90 лет
 
         System.out.println("Сравнение LocalDate");
         System.out.println(lenin.compareTo(gagarin));//сравнение дат

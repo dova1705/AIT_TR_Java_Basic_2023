@@ -8,6 +8,7 @@ public interface Album {
 
     //метод добавление фото
     boolean addPhoto(Photo photo);
+
     //метод удаление фото
     boolean removePhoto(int photoId, int albumId);
     boolean updatePhoto(int photoId, int albumId, String url);
@@ -15,6 +16,7 @@ public interface Album {
     Photo[] getAllPhotoFromAlbum(int albumId);
     Photo[] getBetweenDate(LocalDate dateFrom, LocalDate dateTo);
     int size();
+
 
 
 }

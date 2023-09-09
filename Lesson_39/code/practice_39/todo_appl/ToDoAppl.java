@@ -27,8 +27,8 @@ public class ToDoAppl {
                     toDoList.printTasks();
                     break;
                 case 2:
-
-
+                    toDoList.addTask();
+                    break;
             }
 
 

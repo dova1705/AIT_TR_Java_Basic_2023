@@ -12,7 +12,9 @@ public class Photo {
     private String url;
     private LocalDateTime date;
 
+
     //конструктор
+
     public Photo(int albumId, int photoId, String title, String url, LocalDateTime date) {
         this.albumId = albumId;
         this.photoId = photoId;
@@ -42,17 +44,17 @@ public class Photo {
         return date;
     }
 
+
     //сеттер
     public void setTitle(String title) {
         this.title = title;
     }
 
-    //сеттер
     public void setUrl(String url) {
         this.url = url;
     }
 
-    @Override//переопределение метода (или перегрузка?) полиморфизм
+    @Override//переопределение метода (или перегрузка)
     public String toString() {
         return "Photo{" +
                 "albumId=" + albumId +
@@ -63,7 +65,7 @@ public class Photo {
                 '}';
     }
 
-    @Override
+    @Override//переопределение метода (или перегрузка)
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -71,7 +73,7 @@ public class Photo {
         return albumId == photo.albumId && photoId == photo.photoId;
     }
 
-    @Override
+    @Override//переопределение метода (или перегрузка)
     public int hashCode() {
         return Objects.hash(albumId, photoId);
     }
