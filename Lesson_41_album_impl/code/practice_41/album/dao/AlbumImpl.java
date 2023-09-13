@@ -1,8 +1,10 @@
-package practice_40.album.dao;
+package practice_41.album.dao;
 
-import practice_40.album.model.Photo;
+import practice_41.album.model.Photo;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.function.Predicate;
@@ -27,16 +29,19 @@ public class AlbumImpl implements Album {
     @Override
     public boolean addPhoto(Photo photo) {
         //нельзя добавить null, нельзя добавить photos.length == size, нельзя добавить то же самое photo (проверка на два id)
-        //надо иметь отсортированный массив
+        //надо иметь отсортированный массив, так как binarySearch работает отсортированным массивом
+        //Метод binarySearch возвращает индекс искомого элемента
+        //Если элемент массива не найден то, binarySearch вернет отрицательное число, где должен стоять искомый элемент со знаком минус и на 1 меньше
         //нужно применить binarySearch (получим индекс в массиве), чтобы найти место куда вставить фото
-        //тогда можно сделать addPhoto
+        //тогда можно выполнить addPhoto
         if (photo == null || size == photos.length || getPhotoFromAlbum(photo.getPhotoId(), photo.getAlbumId()) != null) {
             return false;
         }
         //находим место, куда вставить в массив photo
         int index = Arrays.binarySearch(photos, 0, size, photo, photoComparator);//результат метода binarySearch класса Arrays присвоили к переменной (Arrays.binarySearch() - возвращает индекс)
-        //на вход методу binarySearch (из массива photos, начиная с нулевого индекса, до size, ищем photo который пришло на вход addPhoto, компаратор)
-        index = index >= 0 ? index : -index - 1; //если индекс равен 0 или больше 0 ? возвращаем индекс : если он отрицательный мы должны поменять ему знак - index - 1
+        //на вход методу binarySearch (из массива photos, начиная с нулевого индекса, до size, ищем photo который пришло на вход addPhoto, компаратор) массив после binarySearch отсортированный
+        index = index >= 0 ? index : - index - 1;//индекс требует обработки меняем знак индекса
+        //index = index >= 0 ? index : -index - 1; //индекс требует обработки, если индекс равен 0 или больше 0 ? возвращаем индекс : если он отрицательный мы должны поменять ему знак и отнимаем 1 - index - 1
         System.arraycopy(photos, index, photos, index + 1, size - index);// копируем элементы массива от index на 1 место в право, на вход (берем массив photos, начиная с index, в тот же массив photos, все элементы двигаем в право index + 1, сколько элементов мы должны взять size - index)
         //public static void arraycopy(Object sourceArray, int sourceStartIndex, Object destinationArray, int destinationStartIndex, int length)
         //System.arraycopy() - это метод в Java, который используется для копирования элементов одного массива в другой массив.
@@ -94,12 +99,20 @@ public class AlbumImpl implements Album {
 
     @Override
     public Photo[] getAllPhotoFromAlbum(int albumId) {
-        return new Photo[0];
+        return findByPredicate(p -> p.getAlbumId() == albumId);
     }
 
     @Override
     public Photo[] getBetweenDate(LocalDate dateFrom, LocalDate dateTo) {
-        return new Photo[0];
+        //создадим фото с индексом максимально ранней фотографии и фото с максимально большим индексом
+        //сравнивая с этим фото будем искать индексы фото from и to
+        //для поиска опять будем использовать binarySearch
+        Photo pattern = new Photo(0, Integer.MIN_VALUE, null, null, dateFrom.atStartOfDay());
+        int from = - Arrays.binarySearch(photos, 0, size, pattern, photoComparator) -1;//находим индекс
+        //на вход методу binarySearch (из массива photos, начиная с нулевого индекса, до size, ищем pattern, компаратор) массив после binarySearch отсортированный, возвращает индекс
+        pattern = new Photo(0, Integer.MAX_VALUE, null, null, LocalDateTime.of(dateTo, LocalTime.MAX));//находим правый край
+        int to = - Arrays.binarySearch(photos, from, size, pattern, photoComparator) -1;//находим индекс
+        return Arrays.copyOfRange(photos, from, to);//создаем новый массив с нужнымы нам фото
     }
 
     @Override

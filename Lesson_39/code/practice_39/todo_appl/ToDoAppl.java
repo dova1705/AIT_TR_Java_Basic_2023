@@ -9,16 +9,20 @@ import java.util.Scanner;
 public class ToDoAppl {
 
     public static void main(String[] args) {
+        //поля
         ToDoListImpl toDoList = new ToDoListImpl(10);
         Task[] tasks = new Task[10];
 
         // greeting = приветствие
         System.out.println("Welcome to ToDo Application!");
+        boolean loop = true;
 
-        while (true){
+        while (loop){
             // print menu
             Menu.printMenu(); //статический метод вызывается по имени класса
             // ask choice = выбор пользователя
+            System.out.println();
+            System.out.println("выберите что делать");
             Scanner sc = new Scanner(System.in);
             //включить сканер получить выбор пользователя
             int choice = sc.nextInt();
@@ -29,17 +33,13 @@ public class ToDoAppl {
                 case 2:
                     toDoList.addTask();
                     break;
+//                case 3:
+//                    toDoList.findTask();
+                case 5:
+                    loop = false;
+                    System.out.println("======================= выход!  До встречи!!!   =======================");
+                    break;
             }
-
-
-            // execute
-
-            //ask Continue?
-
         }
-
-
-
     }
-
 }

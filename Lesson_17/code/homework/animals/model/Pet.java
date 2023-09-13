@@ -23,7 +23,6 @@ public class Pet {
     //метод кушать
     public void eat (String name){
         System.out.println(name + " пора кушать");
-        //this.type = name;
     }
     //метод спать
     public void sleep (String name) {
