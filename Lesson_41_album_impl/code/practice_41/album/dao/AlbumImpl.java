@@ -40,7 +40,7 @@ public class AlbumImpl implements Album {
         //находим место, куда вставить в массив photo
         int index = Arrays.binarySearch(photos, 0, size, photo, photoComparator);//результат метода binarySearch класса Arrays присвоили к переменной (Arrays.binarySearch() - возвращает индекс)
         //на вход методу binarySearch (из массива photos, начиная с нулевого индекса, до size, ищем photo который пришло на вход addPhoto, компаратор) массив после binarySearch отсортированный
-        index = index >= 0 ? index : - index - 1;//индекс требует обработки меняем знак индекса
+        index = index >= 0 ? index   : - index - 1;//индекс требует обработки меняем знак индекса
         //index = index >= 0 ? index : -index - 1; //индекс требует обработки, если индекс равен 0 или больше 0 ? возвращаем индекс : если он отрицательный мы должны поменять ему знак и отнимаем 1 - index - 1
         System.arraycopy(photos, index, photos, index + 1, size - index);// копируем элементы массива от index на 1 место в право, на вход (берем массив photos, начиная с index, в тот же массив photos, все элементы двигаем в право index + 1, сколько элементов мы должны взять size - index)
         //public static void arraycopy(Object sourceArray, int sourceStartIndex, Object destinationArray, int destinationStartIndex, int length)

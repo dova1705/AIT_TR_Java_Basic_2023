@@ -38,7 +38,7 @@ public class ToDoListImpl implements ToDoList{
         for (int i = 0; i < tasks.length; i++) {
             if (tasks[i].getId() == id){
                 Task victim = tasks[i];
-                System.arraycopy(tasks, i + 1, tasks, i, (--capacity) - i); //quantity - i - 1. tasks массив из которого будут копироваться элементы, i + 1 индекс элемента с которого начнется копирование, tasks массив в который будут скопированы элементы, i индекс элемента с которого начнется вставка скопированных элементов, (--quantity) - i количество элементов для копирования
+                System.arraycopy(tasks, i + 1, tasks, i, (--capacity) - i); //capacity - i - 1. tasks массив из которого будут копироваться элементы, i + 1 индекс элемента с которого начнется копирование, tasks массив в который будут скопированы элементы, i индекс элемента с которого начнется вставка скопированных элементов, (--quantity) - i количество элементов для копирования
                 Task[] taskCopy = Arrays.copyOf(tasks, tasks.length - 1);
                 tasks = taskCopy;
                 return victim;
