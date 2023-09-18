@@ -7,10 +7,17 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.function.Predicate;
 
 public class ForumImpl implements Forum {
 
     private static Comparator<Post> postComparator = (p1, p2) -> {//компаратор параметризует <Post> параметр компаратора (p1-объект типа Post, p2-объект типа Post) лямбда выражения
+        if (p1 == null || p1.getAuthor() == null || p1.getDate() == null){
+            return -1;
+        }
+        if (p2 == null || p2.getAuthor() == null || p2.getDate() == null){
+            return 1;
+        }
         int res = p1.getAuthor().compareTo(p2.getAuthor());//в целочисленную переменную присваиваем результат сортировки двух объектов по автору, по алфавиту
         res = res != 0 ? res : p1.getDate().compareTo(p2.getDate());//(тернарный оператор) если res не равно 0 ? печатаем res, если равно 0 : сортировка по дате в порядке времени
         return res != 0 ? res : Integer.compare(p1.getPostId(), p2.getPostId());//возвращаем (тернарный оператор) если res не равно 0 ? печатаем res, если равно 0 : сортировка по id поста
@@ -118,7 +125,7 @@ public class ForumImpl implements Forum {
         pattern = new Post(Integer.MAX_VALUE, null, author, null);
         pattern.setDate(LocalDateTime.MAX);
         int to = -Arrays.binarySearch(posts, pattern, postComparator);
-        return Arrays.copyOfRange(posts, from, to);
+        return Arrays.copyOfRange(posts, from, to);//возвращаем массив
     }
 
     @Override //скопировал у преподавателя
@@ -145,4 +152,108 @@ public class ForumImpl implements Forum {
         }
         return -1;
     }
+
+    private Post[] findByPredicate(Predicate<Post> predicate) {
+        Post[] res = new Post[size]; // массив res задаем максимально возможного размера
+        int j = 0;
+        for (int i = 0; i < size; i++) {
+            if (predicate.test(posts[i])) {
+                res[j++] = posts[i]; // найденный пост помещаем в массив res
+            }
+        }
+        return Arrays.copyOf(res, j); // Копируем только те элементы, которые нашлись, т.к. их кол-во = j
+    }
+
+    public void printPosts(Object[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+        System.out.println("==========================================================================");
+    }
+
+    /*
+    private Post[] posts;
+    private int size;
+
+    public ForumImpl() {
+        posts = new Post[0];
+    }
+    @Override
+    public boolean addPost(Post post) {
+        if (post == null || getPostById(post.getPostId()) != null) {
+            return false;
+        }
+        posts = Arrays.copyOf(posts, posts.length + 1);
+        posts[posts.length - 1] = post;
+        size++;
+        return true;
+    }
+
+    @Override
+    public boolean removePost(int postId) {
+        int index = searchById(postId);
+        if (index < 0) {
+            return false;
+        }
+        System.arraycopy(posts, index + 1, posts, index, size - index - 1);
+        posts = Arrays.copyOf(posts, posts.length - 1);
+        size--;
+        return true;
+    }
+
+    @Override
+    public boolean updatePost(int postId, String newContent) {
+        int index = searchById(postId);
+        if (index < 0) {
+            return false;
+        }
+        posts[index].setContent(newContent);
+        return true;
+    }
+
+    @Override
+    public Post getPostById(int postId) {
+        int index = searchById(postId);
+        if (index < 0) {
+            return null;
+        }
+        return posts[index];
+    }
+
+    @Override
+    public Post[] getPostsByAuthor(String author) {
+        return findByPredicate(p -> p.getAuthor().equals(author));
+    }
+
+    @Override
+    public Post[] getPostsByAuthor(String author, LocalDate dateFrom, LocalDate dateTo) {
+        return findByPredicate(p -> p.getAuthor().equals(author) && p.getDate().toLocalDate().compareTo(dateFrom) >= 0
+                && p.getDate().toLocalDate().compareTo(dateTo) <= 0);
+    }
+
+    @Override
+    public int size() {
+        return size;
+    }
+
+    private int searchById(int postId) {
+        for (int i = 0; i < size; i++) {
+            if (posts[i].getPostId() == postId) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    private Post[] findByPredicate(Predicate<Post> predicate) {
+        Post[] res = new Post[size];
+        int j = 0;
+        for (int i = 0; i < size; i++) {
+            if (predicate.test(posts[i])) {
+                res[j++] = posts[i];
+            }
+        }
+        return Arrays.copyOf(res, j);
+    }
+    */
 }
