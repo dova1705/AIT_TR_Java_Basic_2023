@@ -108,11 +108,11 @@ public class AlbumImpl implements Album {
         //сравнивая с этим фото будем искать индексы фото from и to
         //для поиска опять будем использовать binarySearch
         Photo pattern = new Photo(0, Integer.MIN_VALUE, null, null, dateFrom.atStartOfDay());
-        int from = - Arrays.binarySearch(photos, 0, size, pattern, photoComparator) -1;//находим индекс
+        int from = -Arrays.binarySearch(photos, 0, size, pattern, photoComparator) -1;//находим индекс
         //на вход методу binarySearch (из массива photos, начиная с нулевого индекса, до size, ищем pattern, компаратор) массив после binarySearch отсортированный, возвращает индекс
         pattern = new Photo(0, Integer.MAX_VALUE, null, null, LocalDateTime.of(dateTo, LocalTime.MAX));//находим правый край
-        int to = - Arrays.binarySearch(photos, from, size, pattern, photoComparator) -1;//находим индекс
-        return Arrays.copyOfRange(photos, from, to);//создаем новый массив с нужнымы нам фото
+        int to = -Arrays.binarySearch(photos, from, size, pattern, photoComparator) -1;//находим индекс
+        return Arrays.copyOfRange(photos, from, to);//создаем новый массив с нужными нам фото
     }
 
     @Override

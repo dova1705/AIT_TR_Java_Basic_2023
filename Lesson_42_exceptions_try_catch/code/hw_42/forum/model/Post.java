@@ -49,9 +49,10 @@ public class Post implements Comparable<Post>{
     public void setDate(LocalDateTime date) {
         this.date = date;
     }
-//    public int addLike(){
-//        return
-//    }
+    public int addLike(){
+        ++likes;
+        return likes;
+    }
 
     @Override
     public String toString() {
@@ -68,7 +69,7 @@ public class Post implements Comparable<Post>{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) return false;//вернем false когда сравниваем с null или с объектом другого класса
         Post post = (Post) o;
         return postId == post.postId;
     }

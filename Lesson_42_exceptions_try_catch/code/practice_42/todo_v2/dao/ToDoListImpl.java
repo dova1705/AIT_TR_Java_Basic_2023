@@ -2,12 +2,9 @@ package practice_42.todo_v2.dao;
 
 import practice_42.todo_v2.model.Task;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class ToDoListImpl implements ToDoList {
-
     final String OUTPUT = "tasks.txt";
     final String INPUT = "tasks.txt";
 
@@ -78,18 +75,32 @@ public class ToDoListImpl implements ToDoList {
         return quantity;
     }
 
-    //TODO - add method saveTasks()
+    // TODO add method saveTasks()
     @Override
     public void saveTasks() throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(OUTPUT));//
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(OUTPUT));//встроенный в Java класс
         for (int i = 0; i < quantity; i++) {
-            String str = String.valueOf(tasks[i]);//переводим tasks в строку
+            String str = String.valueOf(tasks[i]);//переводим tasks в строку. Метод String.valueOf() в Java преобразует различные типы данных, такие как int, double, boolean и т. д., в их эквивалентные представления в виде строк.
             bufferedWriter.write(str + "\n");//запись, "\n" - перевод в новую строку
         }
-        bufferedWriter.flush();//????
+        bufferedWriter.flush();//толчок к исполнению
     }
 
-
-
-    //TODO - add method readTasks()
+    // TODO add method readTasks()
+    //задачи надо считывать тоже в цикле по строкам
+    //строку надо превратить в объект task: номер строки - это id, а то, что стоит после ":" это содержание задачи
+    @Override
+    public void readTasks() throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(INPUT));//INPUT - в 9-ой строке
+        String str;
+        int countTasks = 0;
+        while ((str = bufferedReader.readLine()) != null){
+            int index = str.indexOf(':');//мы нашли индекс символа ":"
+            String t = str.substring(index + 1, str.length()).trim();//"выкусили" из строки текс после символа ":" и до конца строки
+            Task task = new Task(t); //создали новый объект класса Task
+            tasks[countTasks] = task;//поместили эту задачу в массив
+            countTasks++;//счетчик увеличили на 1
+            quantity++;
+        }
+    }
 }
