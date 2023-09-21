@@ -34,7 +34,7 @@ public class ArrayTools {
     //поиск объектов по условию
     public static <T> T findByPredicate(T[] arr, Predicate<T> predicate){//метод возвращает тип Т из массива типа Т[], отбор по предикату
         for (int i = 0; i < arr.length; i++) {
-            if (predicate.test(arr[i])){
+            if (predicate.test(arr[i])){//test встроенный в класс Predicate метод
                 return arr[i];
             }
         }

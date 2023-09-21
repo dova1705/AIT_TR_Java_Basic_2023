@@ -40,6 +40,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Lesson_42_exceptions_try_catch/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/consultation/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Lesson_43/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_44_iterator/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Lesson_45/code" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

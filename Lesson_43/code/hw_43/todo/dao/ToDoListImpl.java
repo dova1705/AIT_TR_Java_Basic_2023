@@ -1,6 +1,6 @@
-package practice_42.todo_v2.dao;
+package hw_43.todo.dao;
 
-import practice_42.todo_v2.model.Task;
+import hw_43.todo.model.Task;
 
 import java.io.*;
 
@@ -12,8 +12,7 @@ public class ToDoListImpl implements ToDoList {
 
     //поля
     private Task[] tasks;
-    int capacity;
-    private int quantity;
+    private int quantity;// = size
 
     public ToDoListImpl(int capacity) {
         this.tasks = new Task[capacity];
@@ -93,14 +92,14 @@ public class ToDoListImpl implements ToDoList {
     public void readTasks() throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(INPUT));//INPUT - в 9-ой строке
         String str;
-        int countTasks = 0;//счетчик (после перевода в Task используется как индекс массива)
+        int countTasks = 0;
         while ((str = bufferedReader.readLine()) != null){
             int index = str.indexOf(':');//мы нашли индекс символа ":"
             String t = str.substring(index + 1, str.length()).trim();//"выкусили" из строки текс после символа ":" и до конца строки
             Task task = new Task(t); //создали новый объект класса Task
             tasks[countTasks] = task;//поместили эту задачу в массив
             countTasks++;//счетчик увеличили на 1
-            quantity++;//количество Task-ов
+            quantity++;
         }
     }
 }
