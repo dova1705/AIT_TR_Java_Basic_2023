@@ -1,6 +1,6 @@
-package practice_46.employee.model;
+package practice_46.employee_company.model;
 
-public class Employee {
+public abstract class Employee {
     // поля класса
     protected static double minWage = 30; // ставка в евро
     protected final int id; // это хорошо

@@ -1,6 +1,6 @@
-package practice_46.employee.dao;
+package practice_46.employee_company.dao;
 
-import practice_46.employee.model.Employee;
+import practice_46.employee_company.model.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +19,8 @@ public class CompanyArrayListImpl implements Company {
 //    public CompanyImpl(int capacity) {
 //        employees = new Employee[capacity];
 //    }
-//
-    // стало
 
+    // стало
     public CompanyArrayListImpl(int capacity) {
         employees = new ArrayList<>(); // создаем новый список сотрудников, кот называется employees
         this.capacity = capacity;
@@ -41,7 +40,7 @@ public class CompanyArrayListImpl implements Company {
         if (employee == null || employees.size() == capacity || findEmployee(employee.getId()) != null) {
             return false;
         }
-        employees.add(employee); // доавили сотрудника в список
+        employees.add(employee); // добавили сотрудника в список
         return true;
     }
 
@@ -86,6 +85,7 @@ public class CompanyArrayListImpl implements Company {
         }
         return null;
     }
+
 
     @Override
     public double totalSalary() {

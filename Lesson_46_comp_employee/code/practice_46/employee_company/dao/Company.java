@@ -1,6 +1,6 @@
-package practice_46.employee.dao;
+package practice_46.employee_company.dao;
 
-import practice_46.employee.model.Employee;
+import practice_46.employee_company.model.Employee;
 
 public interface Company {
     // перечень действий - методов
@@ -15,7 +15,7 @@ public interface Company {
 
     default double averageSalary() {
         return totalSalary() / size();
-    } // средняя разплата по компании
+    } // средняя зарплата по компании
 
     double totalSales(); // объем продаж за месяц
 

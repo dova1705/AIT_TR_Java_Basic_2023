@@ -1,14 +1,15 @@
-package practice_46.employee.dao;
+package practice_46.employee_company.dao;
 
-import practice_46.employee.model.Employee;
-import practice_46.employee.model.SalesManager;
+import practice_46.employee_company.model.Employee;
+import practice_46.employee_company.model.SalesManager;
 
 import java.util.function.Predicate;
 
 public class CompanyImpl implements Company {
+    //поля класса
     Employee[] employees;
     int size;
-
+    //конструктор
     public CompanyImpl(int capacity) {
         employees = new Employee[capacity];
     }

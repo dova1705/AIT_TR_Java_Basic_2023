@@ -1,4 +1,4 @@
-package practice_46.employee.model;
+package practice_46.employee_company.model;
 
 public class SalesManager extends Employee {
     // поля
