@@ -13,7 +13,7 @@ public class ThreadGroupExample {
 
         // Запуск потоков
         thread1.start();
-       // thread2.run();
+        thread2.start();
         thread3.start();
 
         // Использование метода activeCount() для получения количества активных потоков в группе

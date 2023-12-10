@@ -1,8 +1,9 @@
 package practice_59;
 
 public class StudentCode {
-    public static void main(String[] args) {
-        tryDemonThread();
+    public static void main(String[] args) throws InterruptedException {
+       // tryDemonThread();
+        trySetThreadName();
 
     }
     public static void trySetThreadName() throws InterruptedException {
