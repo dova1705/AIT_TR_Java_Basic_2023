@@ -23,26 +23,30 @@ class Counter {
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        Counter counter = new Counter();
+        String str = "abc";
+        str.replace("abc", "cba");
+        System.out.println(str);
 
-        Thread thread1 = new Thread(() -> {
-            for (int i = 0; i < 10_000; i++) {
-                counter.increment();
-            }
-        });
-
-        Thread thread2 = new Thread(() -> {
-            for (int i = 0; i < 10_000; i++) {
-                counter.increment();
-            }
-        });
-
-        thread1.start();
-        thread2.start();
-
-        thread1.join();
-        thread2.join();
-
-        System.out.println("Final counter value: " + counter.getValue());  // Выводит 2000, если все инкременты прошли успешно
+//        Counter counter = new Counter();
+//
+//        Thread thread1 = new Thread(() -> {
+//            for (int i = 0; i < 10_000; i++) {
+//                counter.increment();
+//            }
+//        });
+//
+//        Thread thread2 = new Thread(() -> {
+//            for (int i = 0; i < 10_000; i++) {
+//                counter.increment();
+//            }
+//        });
+//
+//        thread1.start();
+//        thread2.start();
+//
+//        thread1.join();
+//        thread2.join();
+//
+//        System.out.println("Final counter value: " + counter.getValue());  // Выводит 2000, если все инкременты прошли успешно
     }
 }
