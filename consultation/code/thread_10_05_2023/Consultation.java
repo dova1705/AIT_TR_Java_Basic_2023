@@ -1,4 +1,4 @@
-package Thread_10_05_2023;
+package thread_10_05_2023;
 
 public class Consultation {
     public static void main(String[] args) throws InterruptedException {
