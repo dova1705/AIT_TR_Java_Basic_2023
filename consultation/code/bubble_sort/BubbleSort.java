@@ -1,5 +1,7 @@
 package bubble_sort;
 
+import java.util.Arrays;
+
 public class BubbleSort {
     public static void main(String[] args) {
         int[] numbers = {-1, 0, 7, 6, 5, 4, 3, 2, 1,};
@@ -13,13 +15,18 @@ public class BubbleSort {
 
     public static void bubbleSort(int[] arr) {
         for (int j = 0; j < arr.length - 1; j++) {
+            boolean sorted = true; //сокращает проход по циклу (улучшает алгоритм)
             for (int i = 0; i < arr.length - 1; i++) {
                 if (arr[i] > arr[i + 1]) {
                     int buffer = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i + 1] = buffer;
+                    sorted = false;
                 }
             }
+            System.out.println((j + 1) + ": " + Arrays.toString(arr));
+            if (sorted)
+                break;
         }
     }
 
