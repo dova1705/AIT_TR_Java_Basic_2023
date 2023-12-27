@@ -2,7 +2,7 @@ package practice_65;
 
 import java.util.Arrays;
 
-public class StudentCode {
+public class BubbleSort {
     // bubble sort O(n^2)
     public static void main(String[] args) {
         int[] arr = {-1, 87, 6, -15, 92, 22, 31, -48, 54, 6};

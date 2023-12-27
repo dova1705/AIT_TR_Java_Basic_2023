@@ -23,7 +23,7 @@ public class Consultation {
         long l = 12L;   // 64  bit  (32 bit по умолчанию приводится к типу int)
 
         float f = 1.0f;  // 32 bit
-        double d = 1.0d;  // 64 bit
+        double d = 1.0d;  // 64 bit (в double будет более точнее результат потому-что после запятой больше цифр)
 
         char c1 = 105;   // 32 bit
         char c2 = 'd';
@@ -36,7 +36,7 @@ public class Consultation {
         // 0000
         System.out.println(8l * Integer.MAX_VALUE);
         System.out.println(f / 3);
-        System.out.println(d / 3);
+        System.out.println(d / 3); // в double будет более точнее результат потому-что после запятой больше цифр
         System.out.println(c1);
         System.out.println(c2);
 
