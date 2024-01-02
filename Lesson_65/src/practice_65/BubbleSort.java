@@ -18,7 +18,8 @@ public class BubbleSort {
                     sorted = false;
                 }
             }
-            System.out.println("i = " + (i + 1)+ " : "+ Arrays.toString(arr));
+
+            System.out.println("i = " + (i + 1)+ " : " + Arrays.toString(arr));
             if (sorted)
                 break;
         }

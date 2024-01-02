@@ -2,6 +2,8 @@ package bubble_sort;
 
 import java.util.Arrays;
 
+import static java.util.Arrays.*;
+
 public class BubbleSort {
     // bubble sort O(n^2)
     public static void main(String[] args) {
