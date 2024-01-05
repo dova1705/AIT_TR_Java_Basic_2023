@@ -1,4 +1,4 @@
-package practice_68;
+package practice_69;
 
 public class Car {
     // Бренд автомобиля
